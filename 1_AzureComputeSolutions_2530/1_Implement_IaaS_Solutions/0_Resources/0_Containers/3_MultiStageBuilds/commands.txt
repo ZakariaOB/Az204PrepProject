@@ -1,0 +1,7 @@
+1. Build your new Docker image
+
+sudo docker build -t sqlapp-new .
+
+2. Run your new container
+
+sudo docker run --name sqlapp-2 -p 80:80 -d sqlapp-new

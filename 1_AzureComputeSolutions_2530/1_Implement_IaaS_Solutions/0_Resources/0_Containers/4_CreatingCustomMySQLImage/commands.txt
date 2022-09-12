@@ -1,0 +1,13 @@
+1. Build the custom MySQL image
+
+sudo docker build -t appsqlimage .
+
+2. Run the image
+
+sudo docker run -d -p 3306:3306 --name appsql appsqlimage
+
+3. Connect to the container
+
+sudo docker exec -it appsql bash
+
+

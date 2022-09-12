@@ -1,0 +1,11 @@
+1. The following command can be used to build a custom image
+
+sudo docker build -t sqlapp .
+
+2. Use the following command as a reference to stop a running container
+
+sudo docker stop 9ec
+
+3. Then you can run a container out of your custom image
+
+sudo docker run --name sqlapp-1 -p 80:80 -d sqlapp
