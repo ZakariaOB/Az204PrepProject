@@ -19,9 +19,9 @@
   - We can see tables at workspace : Event, Heartboeat, Syslog
 
 - Azure Web App - Diagnostic
- - At every resource you can find Diagnostic settings where you can collect different data
- - Http logs
- - If you go to Diagnostic setting you can select different logs to use
+  - At every resource you can find Diagnostic settings where you can collect different data
+  - Http logs
+  - If you go to Diagnostic setting you can select different logs to use
 
 - ARM Templates - Action Groups
   - We can use arm template to create action groups
