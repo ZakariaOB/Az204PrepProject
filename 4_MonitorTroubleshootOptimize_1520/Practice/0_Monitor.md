@@ -9,12 +9,12 @@
 - Azure Monitor - Dynamic thresholds
   - This use Machine learning to check history
   - 70% is a static threshold
-  - Sensitivity => smal deviations will trigger the alert
+  - Sensitivity => small deviations will trigger the alert
   - Threshold sensitiviy => High, Medium or High
 
 - Log Analytics workspace
   - You can check a resource => Azure Web app
-  - For a virtual machine the an extension will be installed : Microsoft Monitor Agent
+  - For a virtual machine an extension will be installed : Microsoft Monitor Agent
   - After we need to decide the data to be collected
   - We can see tables at workspace : Event, Heartboeat, Syslog
 

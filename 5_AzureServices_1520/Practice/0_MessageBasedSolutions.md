@@ -104,7 +104,7 @@
 - Topics
   - In order to start getting messages from a Topic you should create subscriptions
   - If you send a message to the topic all the subscriptions will get notified
-  - A topic subscription resembles a virtual queue that receives copies of the messages that  are sent to the topic. Consumers receive messages from a subscription identically to the way they receive messages from a queue
+  - A topic subscription ressembles a virtual queue that receives copies of the messages that  are sent to the topic. Consumers receive messages from a subscription identically to the way they receive messages from a queue
   - This is how you create the receiver (Using topicName and subscriptionName):
        ```
        ServiceBusReceiver serviceBusReceiver = ServiceBusClient.CreateReceiver(
@@ -114,5 +114,7 @@
         ```
   - Sending or receiving from a Topic is the same , it only differs on ServiceBusReceuver creation constructor parameters .
   - For the connection string you will need to create a Shared Access Policy at Topic level .
+
+- TODO to recheck Azure service Bus Boolean filters, sql and correlation filters
 
 - TODO Azure Service Bus Queue - Azure Functions
