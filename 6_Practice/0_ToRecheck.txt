@@ -1,0 +1,12 @@
+- Az copy tool commands
+
+- Azure cosmos db consistency rules
+   Strong, Prefix, Bounded state etc..
+
+- Event grid 
+   - Filter options
+
+- Azure key vault
+  - Add keys using cli
+
+- Azure Search service : ??
