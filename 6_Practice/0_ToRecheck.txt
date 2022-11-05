@@ -10,3 +10,6 @@
   - Add keys using cli
 
 - Azure Search service : ??
+
+
+- SkillCertPro Next : 6

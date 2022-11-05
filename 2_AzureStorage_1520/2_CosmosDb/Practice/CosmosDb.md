@@ -39,7 +39,7 @@
 
 - *Trigger*
   - Triggers could also be created
-  - Somthing specifi about cosmos db trigger is that you can define the trigger that you need to be called before your operation (Unlike triggers on SGSBDs for example)
+  - Somthing specific about cosmos db trigger is that you can define the trigger that you need to be called before your operation (Unlike triggers on SGSBDs for example)
 
 - *Changes Feed*
   - Are done to check updates on a some objects

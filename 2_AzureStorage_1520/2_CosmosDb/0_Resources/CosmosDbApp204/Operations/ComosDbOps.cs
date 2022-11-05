@@ -277,6 +277,7 @@ namespace CosmosDbApp204.Operations
                     category = "Laptop"
                 };
 
+            // TODO To recheck
             await container.CreateItemAsync(orderItem, null, new ItemRequestOptions { PreTriggers = new List<string> { "validateItem" } });
 
             Console.WriteLine("Item has been inserted");
