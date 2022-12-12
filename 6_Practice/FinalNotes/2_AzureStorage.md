@@ -12,7 +12,7 @@ TODO https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-d
 - If we need to retrieve an entity based on the partition and row key , we will need to use the TableOperation method : TableOperation query = TableOperation.Retrieve(p_partitionkey,p_rowkey)
   TODO : Choosing the right api for our cosmos db database .
 
-- A Table Scan does not include the PartitionKey and is very inefficient because it searches all of the partitions that make up your table in turn for any matching entities. It will perform a table scan regardless of whether or not your filter uses the RowKey. For example: $filter=LastName eq 'Jones'
+- A Table Scan that does not include the PartitionKey is very inefficient because it searches all of the partitions that make up your table in turn for any matching entities. It will perform a table scan regardless of whether or not your filter uses the RowKey. For example: $filter=LastName eq 'Jones'
   https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-for-query
 
 - --enable-automatic-failover true
@@ -23,3 +23,23 @@ TODO https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-d
 
 - Here since the query is performed on a property that is not related to the Partition Key, all the rows from the table will be fetched. The Microsoft documentation mentions the following :
   https://docs.microsoft.com/en-us/azure/storage/tables/table-storage-design-for-query
+
+
+- A lease needs to be applied on common blob’s in the Azure storage account.
+   - comp=lease 
+   - https://skillcertlabstore2020.blob.core.windows.net/demo/skillcertlabcommon.json?comp=lease
+  
+
+- Here the users must always see the latest committed write
+   - Strong
+
+- You can issue the REST API call – https://skillcertlabstore2020.table.core.windows.net/Customers()?$top=10
+Since this is clearly given in the Microsoft documentation, all other options are incorrect
+For more information on querying tables and entities, please visit the below URL
+TODO https://docs.microsoft.com/en-us/rest/api/storageservices/querying-tables-and-entities
+
+- Since the class itself defined for the entity is montanaEntity, we need to use that class name.
+For more information on working with table queries from .Net, please visit the below URL:
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-example
+
+- The right data type is : montanacloudBlockBlob.UploadFromFileAsync(--);

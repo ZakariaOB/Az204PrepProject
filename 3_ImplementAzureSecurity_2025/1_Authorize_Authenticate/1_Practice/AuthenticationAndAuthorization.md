@@ -2,7 +2,7 @@
     - It's always better to use Azure for security to benefit from : MFA for example, password  hashed etc ..
     - Authentication : Azure active directory which is the identity provider here
     - Authorization : Using tokens
-    - Othe identity providers : Linkedin, Facebook, Google etc ..
+    - Other identity providers : Linkedin, Facebook, Google etc ..
     - Authorization is Azure is compliant with OAuth2
 
 - OAuth2 standard
@@ -69,7 +69,7 @@
 
 
 - Getting Group claims
- - You can create groups in AD and give a group access instead of one by one
+  - You can create groups in AD and give a group access instead of one by one
 
 
 - Getting an access token (Authorization)
@@ -96,22 +96,25 @@
 
 
 - Accessing the blob storage from Postman
- - We can generate an access token from graph api using a different scope 
-
+  - We can generate an access token from graph api using a different scope 
 
 - Creating a WebApi and protecting a WebApi
   - We can also protect our WebApi by associating it to an application object
   - The idea here is to protect the Web API
   - We will also need to register an application just for our API
-  - At ProductAPI go to accessTokenAcceptedVersion > null => default version should be 2
-  - Add this line : builder.Services.AddMicrosoftIdentityWebAppAuthentication(builder.Configuration, "AzureAd"); 
+  - At ProductAPI go to Manifest > accessTokenAcceptedVersion > (null is default version)
+       should be 2 to work with OAuth version 2 .
+  - Add this line (VERY IMPORTANT): 
+      ``` builder.Services.AddMicrosoftIdentityWebAppAuthentication(builder.Configuration, "AzureAd"); ```
   - We don't need a client secret in case we want to secure our WEB API unlike if our application will access a resource .
   - So the application object could be used both ways : To secure the app or to let the app access secured resources
   - app.UseAuthentication(); app.UseAuthorization(); are also necessary
   - We will need to add an APP role :
    App roles are custom roles to assign permissions to users or apps. The application defines 
    and publishes the app roles and interprets them as permissions during authorization.
-  - Exposes an API : Set > api://f5ac8984-c651-4a1b-abdf-d09e9b8857a8/.default
+  - Exposes an API
+     - Define an AppRole
+     - Set > api://f5ac8984-c651-4a1b-abdf-d09e9b8857a8/.default
   - To access our api from POSTMAN , POSTMAN should be associated with a application object that can access our ProductAPI
   - Adding a scope create only delegated permissions
   - to give access to the blobapplication for POSTMAN app we need to go APP permissions > Add permission > MY APIs

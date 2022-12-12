@@ -32,3 +32,27 @@ https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-diagnosing-failures
 
 - TODO If you have multiple topics, then an order needs to be sent to all topics. Then deleting an order once it has been picked by a driver will an issue. So, Option A gets ruled out.
   => This config could not use topics
+
+
+- There is no 
+    az webapp config redis 
+    But : az webapp config appsettings
+
+- You have to ensure that data is streamed from the Event Hub to Azure BLOB storage
+  TODO : Event Hubs Capture
+
+- Batch service context 
+  - List<ResourceFile> whizlabInputFiles = new List<ResourceFile>();
+  - Using  BatchSharedKeyCredentials
+
+- CRON every 2 hours : 0 0 */2 * * *”
+
+- "A find-and-replace" policy to update the response body with the user profile information” => Inbound !!!
+  This seems like an Outbound .
+  TODO https://docs.microsoft.com/en-us/azure/api-management/api-management-sample-send-request
+
+- AppRoles usage at API Level : Expose API
+
+- TODO Recheck topics and multiple subscriptions
+
+- Since the question already states that we have a resource group and namespace in place, we can just use the “New-AzureRmServiceBusQueue” to create a new queue in the namespace.

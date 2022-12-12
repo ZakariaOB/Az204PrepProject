@@ -11,5 +11,4 @@
 
 - Azure Search service : ??
 
-
-- SkillCertPro Next : 6
+- SkillCertPro Next : 10
