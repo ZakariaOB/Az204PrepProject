@@ -37,7 +37,7 @@
         sudo service nginx stop
         sudo chmod 777 default => Give permissions on default folder
         sudo service nginx start
-  - We need to cinfigure nginx to redirect to our application to be served using Kestrel
+  - We need to configure nginx to redirect to our application to be served using Kestrel
     - We go /etc/nginx/sites-available
     - cd /etc
     - cd nginx

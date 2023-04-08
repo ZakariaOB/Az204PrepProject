@@ -88,7 +88,7 @@
 
 - You can use slots with databases 
 - For for a given connection string you just check the option : 'Deployment Slot settings'
-- If done the next time a swap is done you will have the connection string swapped also 
+- To check the example where a database swap is avoided .
 
 # Azure App Configuration - Configuration Settings
 

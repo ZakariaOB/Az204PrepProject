@@ -68,7 +68,7 @@
 - This is designed to reduce the size of the image build process
 - With each instruction docker can create layer inside our Docker image
 - Consider a layer (As build): FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-- Once the stage is complete the layer will be deleted
+- **Once the stage is complete the layer will be deleted**
 - We will need to copy the source code inside the linux VM
 - Then copy the new Dockerfile and use it to build the new image
 - Let us build a new image

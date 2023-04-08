@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/1_AzureComputeSolutions_2530/1_Implement_IaaS_Solutions/0_Resources/0_Containers/0_ContainerizeApp/sqlapp/sqlapp/sqlapp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/1_AzureComputeSolutions_2530/1_Implement_IaaS_Solutions/0_Resources/0_Containers/0_ContainerizeApp/sqlapp/sqlapp/sqlapp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/1_AzureComputeSolutions_2530/1_Implement_IaaS_Solutions/0_Resources/0_Containers/0_ContainerizeApp/sqlapp/sqlapp/sqlapp.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
