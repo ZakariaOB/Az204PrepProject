@@ -1,0 +1,44 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">This is a list of Products</h1>
+    @if (Model.IsBeta)
+    {
+        <h2 class="display-4">This is the beta version of the application. Staging version</h2>
+    }
+    @if (Model.UseDataBase)
+    {
+        <h2 class="display-4">Use DataBase option is enabled</h2>
+    }
+    @if (Model.UnifyPriceTo100)
+    {
+        <h2 class="display-4">Unify Price To 100</h2>
+    }
+    @if (!string.IsNullOrEmpty(Model.UnifiedPrice))
+    {
+        <h2 class="display-4">Unified Price is: @Model.UnifiedPrice</h2>
+    }
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <th scope="row">@product.ProductID</th>
+                    <td>@product.ProductName</td>
+                    <td>@product.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

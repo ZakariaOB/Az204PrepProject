@@ -1,0 +1,26 @@
+**PS don't use sudo in windows contect**
+
+The command sudo docker run --name appnginx -p 80:80 -d nginx is 
+used to run a Docker container based on the NGINX image.
+
+Here's what each part of the command does:
+
+sudo: It is used to execute the following command with administrative or superuser privileges. This might be required depending on the user's permissions to run Docker commands.
+
+docker run: This is the Docker command used to create and run a new container based on an image.
+
+--name appnginx: It specifies the name of the container as "appnginx". The container will be referenced by this name.
+
+-p 80:80: This option maps port 80 of the host machine to port 80 of the container. It allows incoming traffic on port 80 of the host machine to be forwarded to the NGINX server running inside the container on port 80.
+
+-d: It runs the container in detached mode, meaning it will run in the background and 
+not display the container's output on the terminal.
+
+nginx: It specifies the name of the Docker image to use for creating the container. In this case, it's the NGINX image, which is a popular web server and reverse proxy.
+
+When you execute this command, Docker will pull the NGINX 
+image from the Docker Hub if it's not already available on the local machine. 
+It will then create and start a new container named "appnginx" based on that image. 
+The NGINX server inside the container will listen on port 80, and any requests 
+to port 80 on the host machine will be forwarded to the NGINX server running 
+*inside the container.

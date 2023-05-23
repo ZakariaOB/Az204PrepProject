@@ -1,0 +1,34 @@
+apiVersion: 2019-12-01
+location: northeurope
+name: SQLAppGroup
+properties:
+  containers: 
+  - name: db
+    properties:
+      image: containerregistrysqliaz204.azurecr.io/appsqlimage:tagone
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 1.5
+      ports:
+      - port: 3306
+  - name: web
+    properties:
+      image: containerregistrysqliaz204.azurecr.io/containers-app:latest
+      resources:
+        requests:
+          cpu: 1
+          memoryInGb: 1.5
+      ports:
+      - port: 80          
+  osType: Linux
+  ipAddress:
+    type: Public
+    ports:
+    - protocol: tcp
+      port: 80
+  imageRegistryCredentials:
+    - server: registryazakaria204.azurecr.io
+      username: registryazakaria204
+      password: fIq1p84/AV08x4JD7qajlWAB2pSGo1EJ
+type: Microsoft.ContainerInstance/containerGroups

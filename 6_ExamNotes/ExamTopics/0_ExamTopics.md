@@ -52,7 +52,7 @@ What should you do ***FIRST*** ?
 - Azure function custom handler
   - Http
   - CustomHandler
-  - For HTTP-triggered functions with no additional bindings or outputs, you may want your handler to work directly with the HTTP request and response instead of the custom handler request and response payloads => "enableForwardingHttpRequest": true
+  - For HTTP-triggered functions with no additional bindings or outputs, you may want your handler to work directly with the HTTP request and response instead of the custom handler request and response payloads => "enableForwardingHttpRequest": false
   
 - The HyperText Transfer Protocol (HTTP) 401 Unauthorized response status code indicates that the client request has not been completed because it lacks valid authentication credentials for the requested resource.
 

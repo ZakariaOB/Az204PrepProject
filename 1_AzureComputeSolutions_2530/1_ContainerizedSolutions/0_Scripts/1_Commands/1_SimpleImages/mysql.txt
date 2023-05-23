@@ -1,0 +1,18 @@
+docker run -d --name my-mysql -e MYSQL_ROOT_PASSWORD=mysql123! -p 3306:3306 mysql
+
+docker exec -it my-mysql mysql -uroot -p
+
+CREATE DATABASE dbmysql; (; is necessary)
+
+use dbmysql;
+
+CREATE TABLE Products
+(
+     ProductID int,
+     ProductName varchar(1000),
+     Quantity int
+);
+
+INSERT INTO Products(ProductID,ProductName,Quantity) VALUES (1,'Mobile',100);
+INSERT INTO Products(ProductID,ProductName,Quantity) VALUES (2,'VL',200);
+INSERT INTO Products(ProductID,ProductName,Quantity) VALUES (3,'Tabs',300);

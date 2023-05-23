@@ -1,0 +1,22 @@
+## Windows
+
+1. The following command can be used to build a custom image
+**docker build -t containers-app .**
+
+2. Then you can run a container out of your custom image
+**docker run --name containers-app-1 -p 80:80 -d containers-app**
+
+3. Use the following command as a reference to stop a running container
+**docker stop 9ec**
+
+
+## Linux
+
+1. The following command can be used to build a custom image
+**sudo docker build -t containers-app .**
+
+2. Use the following command as a reference to stop a running container
+**sudo docker stop 9ec**
+
+3. Then you can run a container out of your custom image
+**sudo docker run --name containers-app-2 -p 80:80 -d containers-app**

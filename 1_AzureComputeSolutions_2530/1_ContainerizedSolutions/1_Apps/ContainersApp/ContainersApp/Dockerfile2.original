@@ -1,0 +1,23 @@
+## FROM mcr.microsoft.com/dotnet/aspnet:6.0
+## WORKDIR /app
+## COPY  . .
+## EXPOSE 80
+## ENTRYPOINT ["dotnet", "ContainersApp.dll"]
+
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+
+ARG BUILDCONFIG=RELEASE
+
+COPY ContainersApp.csproj /build/
+
+RUN dotnet restore ./build/ContainersApp.csproj
+
+COPY . ./build/
+WORKDIR /build/
+RUN dotnet publish ./ContainersApp.csproj -c $BUILDCONFIG
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0.0
+WORKDIR /app
+COPY --from=build /build/out .
+ENTRYPOINT ["dotnet", "ContainersApp.dll"]
