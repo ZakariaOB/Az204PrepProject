@@ -31,3 +31,9 @@
 - Isolated and InProc modes: https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide
 
 # Durable functions 
+
+- Durable functions
+   - Azure functions are stateless this is why we use Durable functions
+   - We will need an orchatrator function
+   - TODO (Not in the exam)
+

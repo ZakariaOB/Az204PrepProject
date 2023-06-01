@@ -21,7 +21,7 @@
 - A way to create a linux VM with docker installed on it 
   - https://github.com/MichaelSL/terraform-azure-linux-vm-
 
-- Create a virtual VM using terraform : [VmCreation](./0_Scripts/Terraform/0_LinuxVmCreation/main.tf) 
+- Create a virtual VM using terraform : [VmCreation](./0_Scripts/0_Terraform/0_LinuxVmCreation/main.tf) 
 
 - To connect to the VM a SSH client will be needed => **Putty** : https://www.putty.org/
 
@@ -50,14 +50,14 @@
 
 # Containerize a .NET application
 
-- Please refer to the app : [ContainersApp](./1_Apps/ContainersApp/)
+- Please refer to the app : [ContainersApp](./1_Apps/ContainersApp/ContainersApp/Program.cs)
 - In **appSettings** make sure to have *UseDataBase* to "false*. We don't need Db access for this stage .
    ```json
    "GlobalSettings": {
     "UseDataBase": "false"
   }
   ```
-- Check the file [BuildContainersAppDocker.md](./0_Scripts/1_Commands/BuildContainersAppDocker.md) to build a custom image and run it .
+- Check the file [BuildContainersAppDocker.txt](./0_Scripts/1_Commands/0_BuildContainersAppDocker.txt) to build a custom image and run it .
 - To open a directory using Windows store terminal : wt -d .
 - Issue with calling nuget inside the docker file
   https://stackoverflow.com/questions/50039331/unable-to-load-the-service-index-for-source-https-api-nuget-org-v3-index-json/52313999#52313999
